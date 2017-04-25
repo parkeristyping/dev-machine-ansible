@@ -1,6 +1,11 @@
 ---
 - hosts: all
   connection: local
+
+  vars_files:
+    - group_vars/all
+    - group_vars/secrets
+
   roles:
   - common
   - dotfiles
@@ -10,4 +15,3 @@
   - postgres
   - redis
   - spacemacs
-  - ruby

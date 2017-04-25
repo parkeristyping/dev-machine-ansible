@@ -1,10 +1,15 @@
 ---
-- name: set bash profile
-  template:
-    src: .bash_profile
-    dest: ~/.bash_profile
+- name: Pull down dotfiles from github
+  git:
+    repo: https://github.com/parkeristyping/dotfiles.git
+    dest: ~/.cfg
+    bare: yes
+    update: no
 
-- name: set user gitignore
-  template:
-    src: .gitignore
-    dest: ~/.gitignore
+- name: Checkout that repo
+  shell: /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME checkout
+  args:
+    chdir: ~/
+
+- name: Ignore files not added
+  shell: /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME config --local status.showUntrackedFiles no

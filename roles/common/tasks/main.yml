@@ -1,4 +1,13 @@
 ---
+- name: check if public key exists
+  stat:
+    path: ~/.ssh/id_rsa
+  register: id_rsa_result
+
+- name: generate new public key
+  shell: ssh-keygen -t rsa -b 4096 -C "{{email}}" -f $HOME/.ssh/id_rsa
+  when: id_rsa_result.stat.exists != true
+
 - name: install xcode
   shell: xcode-select --install
   ignore_errors: yes
@@ -10,3 +19,8 @@
 - name: install homebrew
   shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   when: brew_installed.stdout == ''
+
+- name: install ag (the silver searcher)
+  homebrew:
+    name: the_silver_searcher
+    state: present

@@ -4,5 +4,5 @@
     name: postgres
     state: present
 
-- name: configure postgres
-  shell: ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+- name: configure postgres to launch on startup
+  shell: ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
