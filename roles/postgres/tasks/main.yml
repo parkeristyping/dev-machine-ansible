@@ -1,0 +1,8 @@
+---
+- name: install postgres
+  homebrew:
+    name: postgres
+    state: present
+
+- name: configure postgres
+  shell: ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist

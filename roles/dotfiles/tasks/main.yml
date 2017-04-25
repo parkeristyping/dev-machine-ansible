@@ -1,0 +1,10 @@
+---
+- name: set bash profile
+  template:
+    src: .bash_profile
+    dest: ~/.bash_profile
+
+- name: set user gitignore
+  template:
+    src: .gitignore
+    dest: ~/.gitignore

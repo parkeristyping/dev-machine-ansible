@@ -1,0 +1,5 @@
+---
+- name: install redis
+  homebrew:
+    name: redis
+    state: present

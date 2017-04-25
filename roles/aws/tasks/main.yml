@@ -1,0 +1,9 @@
+---
+- name: install AWS CLI
+  homebrew:
+    name: awscli
+    state: present
+- name: install elastic beanstalk CLI
+  homebrew:
+    name: awsebcli
+    state: present

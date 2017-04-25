@@ -1,0 +1,8 @@
+---
+- name: install pyenv
+
+- name: install python 3
+
+- name: set preferred global python version
+
+- name: install virtualenv

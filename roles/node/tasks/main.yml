@@ -1,0 +1,8 @@
+---
+- name: install nvm
+
+- name: install preferred node version
+
+- name: set global node version
+
+- name: install yarn

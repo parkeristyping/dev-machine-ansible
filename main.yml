@@ -1,0 +1,13 @@
+---
+- hosts: all
+  connection: local
+  roles:
+  - common
+  - dotfiles
+  - aws
+  - java
+  - clojure
+  - postgres
+  - redis
+  - spacemacs
+  - ruby

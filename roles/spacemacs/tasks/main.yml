@@ -1,0 +1,20 @@
+---
+- name: check for modern emacs
+  stat:
+    path: /usr/local/Cellar/emacs-plus
+  register: emacs_plus_status
+
+- name: install modern emacs if missing
+  shell: brew tap d12frosted/emacs-plus && brew install emacs-plus && brew linkapps emacs-plus
+  when: emacs_plus_status.stat.path != '/usr/local/Cellar/emacs-plus'
+
+- name: install spacemacs dotfile
+  git:
+    repo: 'https://github.com/syl20bnr/spacemacs'
+    dest: ~/.emacs.d
+
+- name: install my .spacemacs if missing
+  git:
+    repo: 'https://github.com/parkeristyping/.spacemacs.d'
+    dest: ~/.spacemacs.d
+    update: no
