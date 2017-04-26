@@ -6,3 +6,12 @@
 
 - name: configure postgres to launch on startup
   shell: ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+
+- name: check to see if there is a database
+  shell: psql
+  register: psql_result
+  ignore_errors: yes
+
+- name: create user db if it does not exist
+  shell: createdb
+  when: "'FATAL' in psql_result.stderr"
