@@ -1,6 +1,13 @@
 ---
-# WIP
 - name: install nvm
-- name: install preferred node version
-- name: set global node version
+  homebrew:
+    name: nvm
+    state: present
+
+- name: install latest node version
+  shell: source $(brew --prefix nvm)/nvm.sh && nvm install node
+
 - name: install yarn
+  homebrew:
+    name: yarn
+    state: present
