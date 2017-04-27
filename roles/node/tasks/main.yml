@@ -11,3 +11,8 @@
   homebrew:
     name: yarn
     state: present
+
+- name: install npm
+  homebrew:
+    name: npm
+    state: present
