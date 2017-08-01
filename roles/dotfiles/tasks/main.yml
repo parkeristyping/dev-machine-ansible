@@ -1,7 +1,7 @@
 ---
 - name: Pull down dotfiles from github
   git:
-    repo: https://github.com/parkeristyping/dotfiles.git
+    repo: "{{ dotfiles_repo }}"
     dest: ~/.cfg
     bare: yes
     update: no

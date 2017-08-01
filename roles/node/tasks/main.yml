@@ -4,8 +4,8 @@
     name: nvm
     state: present
 
-- name: install latest node version
-  shell: source $(brew --prefix nvm)/nvm.sh && nvm install node
+# - name: install latest node version
+#   shell: source $(brew --prefix nvm)/nvm.sh && nvm install node
 
 - name: install yarn
   homebrew:

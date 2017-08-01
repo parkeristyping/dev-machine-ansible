@@ -3,3 +3,9 @@
   homebrew:
     name: leiningen
     state: present
+
+- name: install inlein
+  get_url:
+    url: https://github.com/hyPiRion/inlein/releases/download/0.1.0/inlein
+    dest: ~/bin/inlein
+    mode: 0654

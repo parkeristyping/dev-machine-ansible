@@ -24,3 +24,8 @@
   homebrew:
     name: the_silver_searcher
     state: present
+
+- name: install tmux
+  homebrew:
+    name: tmux
+    state: present
