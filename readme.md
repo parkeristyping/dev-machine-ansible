@@ -17,7 +17,7 @@ This repo contains an ansible playbook for configuring a macOS machine the way I
   - This is where you should put the Java version and location you took note of after installing Java from Oracle
 - `roles/spacemacs` -> this has my specific Spacemacs setup and is by far the most customized role. I'm guessing you'll at least want to point it at your own `.spacemacs.d`.
 
-And, if there are any roles you want to exclude entirely, you can just remove it from `main.yml`.
+And, if there are any roles you want to exclude entirely, you can just remove them from `main.yml`.
 
 ## Usage
 
