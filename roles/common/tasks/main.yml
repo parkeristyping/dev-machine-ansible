@@ -15,6 +15,7 @@
 - name: check for homebrew
   shell: which brew
   register: brew_installed
+  ignore_error: yes
 
 - name: install homebrew
   shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

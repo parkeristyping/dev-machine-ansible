@@ -7,12 +7,12 @@
     - group_vars/secrets
 
   roles:
-  - common
-  - dotfiles
-  - aws
-  - java
-  - clojure
-  - postgres
-  - redis
-  - spacemacs
-  - node
+    - common
+    - dotfiles
+    - aws
+    - java
+    - clojure
+    - postgres
+    - redis
+    - spacemacs
+    - node
