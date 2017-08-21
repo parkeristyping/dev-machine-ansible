@@ -15,4 +15,5 @@
     - postgres
     - redis
     - spacemacs
+    - postman
     - node

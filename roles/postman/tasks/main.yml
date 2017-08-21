@@ -1,0 +1,4 @@
+- name: Postman cask
+  homebrew_cask:
+    name: postman
+    state: present
