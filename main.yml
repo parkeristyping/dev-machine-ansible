@@ -11,6 +11,7 @@
     - dotfiles
     - aws
     - docker
+    - kubernetes
     - java
     - clojure
     - postgres
