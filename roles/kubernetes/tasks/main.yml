@@ -1,0 +1,4 @@
+- name: install kubernetes tools
+  homebrew:
+    name: kubectl
+    state: present

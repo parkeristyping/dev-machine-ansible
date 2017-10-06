@@ -10,9 +10,12 @@
     - common
     - dotfiles
     - aws
+    - docker
+    - kubernetes
     - java
     - clojure
     - postgres
     - redis
     - spacemacs
+    - postman
     - node
