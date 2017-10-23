@@ -16,3 +16,9 @@
   homebrew:
     name: npm
     state: present
+
+- name: install Gulp CLI
+  npm:
+    name: gulp-cli
+    state: present
+    global: yes
