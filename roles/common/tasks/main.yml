@@ -30,3 +30,8 @@
   homebrew:
     name: tmux
     state: present
+
+- name: install keychain
+  homebrew:
+    name: keychain
+    state: present
